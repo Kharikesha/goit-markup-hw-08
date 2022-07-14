@@ -17,41 +17,103 @@
     <!-- Хэдэр -->
     <header class="header">
       <div class="container">
-        <nav class="nav">
-          <a class="logo" lang="en" href="./index.html"
-            >Web<span class="logo--black">Studio</span></a
-          >
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--current" href="./index.html">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <a class="logo" lang="en" href="./index.html"
+          >Web<span class="logo--black">Studio</span>
+        </a>
+        <button class="menu-open-btn" type="button">
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="mob-menu is-hidden">
+          <button class="close-open-btn" type="button">
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use href="./images/icons.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="container">
+            <ul class="mob-nav__list">
+              <li class="mob-nav__item">
+                <a class="mob-nav__link mob-nav__link--current" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
 
-        <ul class="header-contacts">
-          <li class="header-contacts__item">
-            <a class="header-contacts__link" lang="en" href="mailto:info@devstudio.com">
-              <svg class="header-contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__link" href="tel:+380961111111">
-              <svg class="header-contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            <div class="mob-header-contacts-container">
+              <ul class="mob-header-contacts">
+                <li class="mob-header-contacts__item">
+                  <a
+                    class="mob-header-contacts__link mob-header-contacts__link--tel"
+                    href="tel:+380961111111"
+                  >
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="mob-header-contacts__item">
+                  <a class="mob-header-contacts__link" lang="en" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="header-social">
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">Instagram</a>
+                </li>
+                <span class="header-social__delimiter"></span>
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">Twitter</a>
+                </li>
+                <span class="header-social__delimiter"></span>
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">Facebook</a>
+                </li>
+                <span class="header-social__delimiter"></span>
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="main-nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="header-contacts">
+              <li class="header-contacts__item">
+                <a class="header-contacts__link" lang="en" href="mailto:info@devstudio.com">
+                  <svg class="header-contacts__icon" width="16" height="12">
+                    <use href="./images/icons.svg#mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="header-contacts__item">
+                <a class="header-contacts__link" href="tel:+380961111111">
+                  <svg class="header-contacts__icon" width="10" height="16">
+                    <use href="./images/icons.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -123,8 +185,10 @@
                   <use href="./images/icons.svg#check"></use>
                 </svg>
               </span>
-              Соглашаюсь с рассылкой и принимаю
-              <a class="form__agreements-link" href="">Условия договора</a>
+              <span>
+                Соглашаюсь с рассылкой и принимаю
+                <a class="form__agreements-link" href="">Условия договора</a>
+              </span>
             </label>
 
             <button class="form__btn" type="submit">Отправить</button>
@@ -232,10 +296,8 @@
             <li class="employee__item">
               <img
                 class="employee__img"
-                src="./images/studio/our-team/our-team-igor-demyanenko.jpg"
+                src="./images/studio/our-team/our-team-igor-demyanenko-480-x1.jpg"
                 alt="Игорь Демьяненко Дизайнер продукта"
-                width="270"
-                height="260"
               />
               <div class="employee__wrapper">
                 <h3 class="employee__name">Игорь Демьяненко</h3>
@@ -275,10 +337,8 @@
             <li class="employee__item">
               <img
                 class="employee__img"
-                src="./images/studio/our-team/our-team-olga-repina.jpg"
+                src="./images/studio/our-team/our-team-olga-repina-480-x1.jpg"
                 alt="Ольга Репина Фронтенд-разработчик"
-                width="270"
-                height="260"
               />
               <div class="employee__wrapper">
                 <h3 class="employee__name">Ольга Репина</h3>
@@ -318,10 +378,8 @@
             <li class="employee__item">
               <img
                 class="employee__img"
-                src="./images/studio/our-team/our-team-nikolai-tarasov.jpg"
+                src="./images/studio/our-team/our-team-nikolai-tarasov-480-x1.jpg"
                 alt="Николай Тарасов Маркетолог"
-                width="270"
-                height="260"
               />
               <div class="employee__wrapper">
                 <h3 class="employee__name">Николай Тарасов</h3>
@@ -361,10 +419,8 @@
             <li class="employee__item">
               <img
                 class="employee__img"
-                src="./images/studio/our-team/our-team-mikhail-ermakov.jpg"
+                src="./images/studio/our-team/our-team-mikhail-ermakov-480-x1.jpg"
                 alt="Михаил Ермаков Дизайнер пользовательского интерфейса"
-                width="270"
-                height="260"
               />
               <div class="employee__wrapper">
                 <h3 class="employee__name">Михаил Ермаков</h3>
@@ -542,5 +598,6 @@
     <!-- JS -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

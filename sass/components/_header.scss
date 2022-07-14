@@ -3,13 +3,25 @@
   align-items: center;
 }
 
+.header .logo {
+  // display: none;
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
 
-.nav {
+.main-nav {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 779px) {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
 }
 
 .nav__list {
@@ -56,7 +68,7 @@
 
 .header-contacts {
   display: flex;
-  margin-left: auto;
+  margin-left: 285px;
 }
 
 .header-contacts__item:not(:first-child) {
