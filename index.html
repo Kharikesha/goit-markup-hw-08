@@ -17,9 +17,6 @@
     <!-- Хэдэр -->
     <header class="header">
       <div class="container">
-        <a class="logo" lang="en" href="./index.html"
-          >Web<span class="logo--black">Studio</span>
-        </a>
         <button class="menu-open-btn" type="button">
           <svg width="40" height="40" aria-label="Переключатель мобильного меню">
             <use href="./images/icons.svg#menu"></use>
@@ -81,38 +78,40 @@
           </div>
         </div>
         <nav class="nav">
-          <div class="main-nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="./index.html">Студия</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Контакты</a>
-              </li>
-            </ul>
+          <a class="logo" lang="en" href="./index.html"
+            >Web<span class="logo--black">Studio</span>
+          </a>
 
-            <ul class="header-contacts">
-              <li class="header-contacts__item">
-                <a class="header-contacts__link" lang="en" href="mailto:info@devstudio.com">
-                  <svg class="header-contacts__icon" width="16" height="12">
-                    <use href="./images/icons.svg#mail"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-              <li class="header-contacts__item">
-                <a class="header-contacts__link" href="tel:+380961111111">
-                  <svg class="header-contacts__icon" width="10" height="16">
-                    <use href="./images/icons.svg#phone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--current" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="header-contacts">
+            <li class="header-contacts__item">
+              <a class="header-contacts__link" lang="en" href="mailto:info@devstudio.com">
+                <svg class="header-contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="header-contacts__item">
+              <a class="header-contacts__link" href="tel:+380961111111">
+                <svg class="header-contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -255,33 +254,87 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="solution">
             <li class="solution__item">
-              <img
-                class="solution__img"
-                src="./images/studio/what-are-we-doing/what-are-we-doing-1.jpg"
-                alt="Написание кода на планшете и компьютере"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/what-are-we-doing/whattodo-1-1200@1x.webp 1x,
+                    ./images/studio/what-are-we-doing/whattodo-1-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/what-are-we-doing/whattodo-1-1200@1x.jpg 1x,
+                    ./images/studio/what-are-we-doing/whattodo-1-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/studio/what-are-we-doing/whattodo-1-1200@1x.jpg"
+                  loading="lazy"
+                  alt="Десктопные приложения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="solution__text">Десктопные приложения</p>
             </li>
             <li class="solution__item">
-              <img
-                class="solution__img"
-                src="./images/studio/what-are-we-doing/what-are-we-doing-2.jpg"
-                alt="Адаптация приложения на мобильный телефон"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/what-are-we-doing/whattodo-2-1200@1x.webp 1x,
+                    ./images/studio/what-are-we-doing/whattodo-2-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/what-are-we-doing/whattodo-2-1200@1x.jpg 1x,
+                    ./images/studio/what-are-we-doing/whattodo-2-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/studio/what-are-we-doing/whattodo-2-1200@1x.jpg"
+                  loading="lazy"
+                  alt="Десктопные приложения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="solution__text">Мобильные приложения</p>
             </li>
             <li class="solution__item">
-              <img
-                class="solution__img"
-                src="./images/studio/what-are-we-doing/what-are-we-doing-3.jpg"
-                alt="Подбор цвета на цветовой палитре с планшета"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/what-are-we-doing/whattodo-3-1200@1x.webp 1x,
+                    ./images/studio/what-are-we-doing/whattodo-3-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/what-are-we-doing/whattodo-3-1200@1x.jpg 1x,
+                    ./images/studio/what-are-we-doing/whattodo-3-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/studio/what-are-we-doing/whattodo-3-1200@1x.jpg"
+                  loading="lazy"
+                  alt="Десктопные приложения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="solution__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -294,11 +347,59 @@
           <h2 class="title">Наша команда</h2>
           <ul class="employee">
             <li class="employee__item">
-              <img
-                class="employee__img"
-                src="./images/studio/our-team/our-team-igor-demyanenko-480-x1.jpg"
-                alt="Игорь Демьяненко Дизайнер продукта"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-1-1200@1x.webp 1x,
+                    ./images/studio/our-team/team-1-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-1-1200@1x.jpg 1x,
+                    ./images/studio/our-team/team-1-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-1-768@1x.webp 1x,
+                    ./images/studio/our-team/team-1-768@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-1-768@1x.jpg 1x,
+                    ./images/studio/our-team/team-1-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-1-480@1x.webp 1x,
+                    ./images/studio/our-team/team-1-480@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-1-480@1x.jpg 1x,
+                    ./images/studio/our-team/team-1-480@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img
+                  src="./images/studio/our-team/team-1-768@1x.jpg"
+                  loading="lazy"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="employee__wrapper">
                 <h3 class="employee__name">Игорь Демьяненко</h3>
                 <p class="employee__profession">Product Designer</p>
@@ -335,11 +436,59 @@
               </div>
             </li>
             <li class="employee__item">
-              <img
-                class="employee__img"
-                src="./images/studio/our-team/our-team-olga-repina-480-x1.jpg"
-                alt="Ольга Репина Фронтенд-разработчик"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-2-1200@1x.webp 1x,
+                    ./images/studio/our-team/team-2-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-2-1200@1x.jpg 1x,
+                    ./images/studio/our-team/team-2-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-2-768@1x.webp 1x,
+                    ./images/studio/our-team/team-2-768@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-2-768@1x.jpg 1x,
+                    ./images/studio/our-team/team-2-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-2-480@1x.webp 1x,
+                    ./images/studio/our-team/team-2-480@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-2-480@1x.jpg 1x,
+                    ./images/studio/our-team/team-2-480@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img
+                  src="./images/studio/our-team/team-2-768@1x.jpg"
+                  loading="lazy"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="employee__wrapper">
                 <h3 class="employee__name">Ольга Репина</h3>
                 <p class="employee__profession">Frontend Developer</p>
@@ -376,11 +525,59 @@
               </div>
             </li>
             <li class="employee__item">
-              <img
-                class="employee__img"
-                src="./images/studio/our-team/our-team-nikolai-tarasov-480-x1.jpg"
-                alt="Николай Тарасов Маркетолог"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-3-1200@1x.webp 1x,
+                    ./images/studio/our-team/team-3-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-3-1200@1x.jpg 1x,
+                    ./images/studio/our-team/team-3-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-3-768@1x.webp 1x,
+                    ./images/studio/our-team/team-3-768@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-3-768@1x.jpg 1x,
+                    ./images/studio/our-team/team-3-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-3-480@1x.webp 1x,
+                    ./images/studio/our-team/team-3-480@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-3-480@1x.jpg 1x,
+                    ./images/studio/our-team/team-3-480@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img
+                  src="./images/studio/our-team/team-3-768@1x.jpg"
+                  loading="lazy"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="employee__wrapper">
                 <h3 class="employee__name">Николай Тарасов</h3>
                 <p class="employee__profession">Marketing</p>
@@ -417,11 +614,59 @@
               </div>
             </li>
             <li class="employee__item">
-              <img
-                class="employee__img"
-                src="./images/studio/our-team/our-team-mikhail-ermakov-480-x1.jpg"
-                alt="Михаил Ермаков Дизайнер пользовательского интерфейса"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-4-1200@1x.webp 1x,
+                    ./images/studio/our-team/team-4-1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-4-1200@1x.jpg 1x,
+                    ./images/studio/our-team/team-4-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-4-768@1x.webp 1x,
+                    ./images/studio/our-team/team-4-768@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-4-768@1x.jpg 1x,
+                    ./images/studio/our-team/team-4-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-4-480@1x.webp 1x,
+                    ./images/studio/our-team/team-4-480@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/our-team/team-4-480@1x.jpg 1x,
+                    ./images/studio/our-team/team-4-480@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img
+                  src="./images/studio/our-team/team-4-768@1x.jpg"
+                  loading="lazy"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="employee__wrapper">
                 <h3 class="employee__name">Михаил Ермаков</h3>
                 <p class="employee__profession">UI Designer</p>
@@ -514,7 +759,7 @@
     </main>
 
     <!-- Футер -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container">
         <div class="footer__list">
           <div class="footer__item">

@@ -1,5 +1,5 @@
 .header .container {
-  @media screen and (max-width: 779px) {
+  @media screen and (max-width: 767px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,8 +82,6 @@
 
 .mob-nav__link {
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--secondary-text-color);
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -95,7 +93,7 @@
     color: var(--hover-text-color);
   }
 
-  @media screen and (max-width: 779px) {
+  @media screen and (max-width: 767px) {
     font-size: 40px;
     line-height: 1.18;
   }
@@ -103,6 +101,10 @@
 
 .mob-nav__link--current {
   color: var(--hover-text-color);
+}
+
+.mob-header-contacts-container {
+  width: 100%;
 }
 
 .mob-header-contacts {

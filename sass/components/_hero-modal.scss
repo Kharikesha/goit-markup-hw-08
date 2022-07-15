@@ -7,6 +7,11 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms var(--cubic);
+  overflow-y: scroll;
+
+  @media screen and (max-width: 767px) {
+    padding: 94px 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -15,28 +20,31 @@
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.1);
+  @media screen and (max-width: 767px) {
+    transform: translate(0%, 0%) scale(0.1);
+  }
+
+  @media screen and (min-width: $tablet) {
+    transform: translate(-50%, -50%) scale(0.1);
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-
   padding: 40px;
   border-radius: 4px;
   background-color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: transform 250ms var(--cubic);
+  transition: transform 350ms var(--cubic);
 
-  @media screen and (max-width: 1199px) {
-    width: 94%;
-    height: 75%;
-    overflow-y: scroll;
+  @media screen and (max-width: 767px) {
+    transform: translate(0%, 0%) scale(1);
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     min-width: 528px;
     min-height: 581px;
   }
