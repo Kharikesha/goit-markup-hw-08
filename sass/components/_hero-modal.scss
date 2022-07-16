@@ -38,6 +38,9 @@
 
   @media screen and (max-width: 767px) {
     transform: translate(0%, 0%) scale(1);
+    max-width: 450px;
+    max-height: 609px;
+    margin: auto;
   }
 
   @media screen and (min-width: $tablet) {
@@ -45,8 +48,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    min-width: 528px;
-    min-height: 581px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -122,12 +133,12 @@
 .form__icon {
   position: absolute;
   left: 3%;
-  top: 55%;
+  top: 50%;
   color: #212121;
   transition: color 250ms var(--cubic);
 
-  .form-input:hover + &,
-  .form-input:focus + & {
+  .form__input:hover + &,
+  .form__input:focus + & {
     color: var(--hover-text-color);
   }
 }

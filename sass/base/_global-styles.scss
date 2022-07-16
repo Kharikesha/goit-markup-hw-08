@@ -70,8 +70,15 @@ img {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .title {
@@ -88,7 +95,7 @@ img {
 
   @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
-    font-size: 28px;
-    line-height: 1.17;
+    font-size: 36px;
+    line-height: calc(42 / 36);
   }
 }

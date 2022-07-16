@@ -1,9 +1,17 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+
   @media screen and (min-width: $tablet) {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
   }
 }

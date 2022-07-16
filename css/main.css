@@ -335,9 +335,17 @@ img {
   }
 }
 
-.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .title {
@@ -356,8 +364,8 @@ img {
 @media screen and (min-width: 1200px) {
   .title {
     margin-bottom: 50px;
-    font-size: 28px;
-    line-height: 1.17;
+    font-size: 36px;
+    line-height: 1.1666666667;
   }
 }
 
@@ -687,6 +695,9 @@ img {
   .modal {
     -webkit-transform: translate(0%, 0%) scale(1);
             transform: translate(0%, 0%) scale(1);
+    max-width: 450px;
+    max-height: 609px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -696,8 +707,18 @@ img {
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
-    min-width: 528px;
-    min-height: 581px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -779,12 +800,12 @@ img {
 .form__icon {
   position: absolute;
   left: 3%;
-  top: 55%;
+  top: 50%;
   color: #212121;
   -webkit-transition: color 250ms var(--cubic);
   transition: color 250ms var(--cubic);
 }
-.form-input:hover + .form__icon, .form-input:focus + .form__icon {
+.form__input:hover + .form__icon, .form__input:focus + .form__icon {
   color: var(--hover-text-color);
 }
 
@@ -1235,13 +1256,22 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 25px;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    margin-bottom: 25px;
+  }
 }
 @media screen and (min-width: 768px) {
   .filter {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
     margin-bottom: 50px;
   }
 }
@@ -1791,6 +1821,7 @@ img {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+  text-decoration: none;
 }
 
 .header-social__delimiter {
